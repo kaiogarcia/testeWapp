@@ -105,14 +105,14 @@ const styles = StyleSheet.create({
     input: {
         fontSize: 16,
         borderRadius: 3,
-        width: 280,
+        width: 288,
         height: 60,
         backgroundColor: 'white',
         paddingHorizontal: 10,
       },
       addButton: {
           backgroundColor: 'rgba(227, 238, 253, 1)',
-          width: 90,
+          width: 85,
           height: 60,
           borderRadius: 3,
           justifyContent: 'center',
