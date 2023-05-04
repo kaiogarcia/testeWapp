@@ -1,4 +1,10 @@
 import { StyleSheet } from 'react-native';
+import * as Font from 'expo-font';
+
+const customFonts = {
+  'Roboto-Light': require('../assets/Fonts/Roboto-Light.ttf'),
+};
+
 
 const styles = StyleSheet.create({
     container: {
@@ -31,12 +37,13 @@ const styles = StyleSheet.create({
       padding: 5,    
     },
     item: {
-     padding: 5,
+     flexWrap: 'wrap',
+     flexDirection: 'row',
+     padding: 22,
      borderWidth: 1,
-     height: 70,
+     //height: 70,
      borderRadius: 2,
      borderColor: '#E6e6e6',
-     flexDirection: 'row',
      alignItems: 'center',
      marginBottom: 5,
     },
@@ -56,8 +63,10 @@ const styles = StyleSheet.create({
     },
     itemCheckboxMarked: {
       backgroundColor: '#3FAF47',
+      fontSize: 18,
     },
     itemText: {
+      marginHorizontal:20,
       marginLeft: 70,
       flex: 1,
       fontSize: 18,
@@ -82,29 +91,30 @@ const styles = StyleSheet.create({
       marginRight: 20,
     },
     deleteButtonText: {
+      justifyContent: 'space-between',
       color: "#fff",
       fontSize: 10,
     },
     footer: {
       flexDirection: 'row',
+      justifyContent: 'space-between',
       backgroundColor: '#2980B9',
       padding: 15,
       width: '100%',
-      justifyContent: 'space-between',
     },
     input: {
+        fontSize: 16,
         borderRadius: 3,
-        width: '70%',
-        height: 50,
+        width: 280,
+        height: 60,
         backgroundColor: 'white',
         paddingHorizontal: 10,
       },
       addButton: {
-          backgroundColor: 'white',
-          width: 20,
-          color: 'white',
-          width: 100,
-          borderRadius: 4,
+          backgroundColor: 'rgba(227, 238, 253, 1)',
+          width: 90,
+          height: 60,
+          borderRadius: 3,
           justifyContent: 'center',
           alignItems: 'center',
         },

@@ -17,11 +17,12 @@ export const useAudioEffect = () => {
       setSound(loadedSound);
     };
     loadSoundAsync();
-    return sound
-      ? () => {
-          sound.unloadAsync();
-        }
-      : undefined;
+
+    return () => {
+      if (sound) {
+        sound.unloadAsync();
+      }
+    };
   }, []);
 
   return sound;

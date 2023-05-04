@@ -1,21 +1,11 @@
-/*import { useState } from 'react';
+const marcarItem = (id, listaCompras, setListaCompras, sound) => {
+  const novoArrayCompras = listaCompras.map((item) =>
+    item.id === id
+      ? { ...item, marcado: !item.marcado }
+      : item
+  );
+  sound.replayAsync();
+  setListaCompras(novoArrayCompras);
+};
 
-export const useMarcarItem = (listaCompras, setListaCompras, sound) => {
-
-  function marcarItem(id) {
-    const novoArrayCompras = listaCompras.map(item => {
-      if (item.id === id) {
-        // Toca o som quando um item é marcado
-        sound.replayAsync();
-        return { ...item, marcado: !item.marcado };
-      } else {
-        return item;
-      }
-    });
-    setListaCompras(novoArrayCompras);
-  }
-
-  return {
-    marcarItem
-  };
-};*/
+export default marcarItem;

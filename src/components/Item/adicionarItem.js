@@ -1,6 +1,4 @@
-import { useState } from 'react';
-
-export const adicionarItem = (inputText, listaCompras, setListaCompras, setInputText) => {
+const adicionarItem = (inputText, listaCompras, setListaCompras, setInputText) => {
   if (inputText !== '') {
     const novoItem = {
       id: Date.now().toString(),
@@ -10,4 +8,6 @@ export const adicionarItem = (inputText, listaCompras, setListaCompras, setInput
     setListaCompras([...listaCompras, novoItem]);
     setInputText('');
   }
-};
+}
+
+export default adicionarItem;
