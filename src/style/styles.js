@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     },
     itemText: {
       marginHorizontal:20,
-      marginLeft: 70,
+      marginLeft: 50,
       flex: 1,
       fontSize: 18,
       color: '#6E6E6E',
