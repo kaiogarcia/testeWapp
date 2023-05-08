@@ -1,26 +1,22 @@
-import { Alert, BackHandler } from 'react-native';
-import { useEffect } from 'react';
+import { Alert, BackHandler } from 'react-native'
+import { useEffect } from 'react'
 
 export const useExitConfirmation = () => {
   const confirmExit = () => {
-    Alert.alert(
-      'Sair do aplicativo',
-      'Tem certeza que deseja sair do aplicativo?',
-      [
-        { text: 'Cancelar', onPress: () => {} },
-        { text: 'Sair', onPress: () => BackHandler.exitApp() },
-      ]
-    );
-  };
+    Alert.alert('Sair do aplicativo', 'Tem certeza que deseja sair do aplicativo?', [
+      { text: 'Cancelar', onPress: () => {} },
+      { text: 'Sair', onPress: () => BackHandler.exitApp() },
+    ])
+  }
 
   useEffect(() => {
     const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
-      confirmExit();
-      return true;
-    });
+      confirmExit()
+      return true
+    })
 
-    return () => backHandler.remove();
-  }, []);
+    return () => backHandler.remove()
+  }, [])
 
-  return {};
-};
+  return {}
+}

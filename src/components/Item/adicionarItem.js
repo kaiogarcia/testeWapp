@@ -4,10 +4,10 @@ const adicionarItem = (inputText, listaCompras, setListaCompras, setInputText) =
       id: Date.now().toString(),
       nome: inputText,
       marcado: false,
-    };
-    setListaCompras([...listaCompras, novoItem]);
-    setInputText('');
+    }
+    setListaCompras([...listaCompras, novoItem])
+    setInputText('')
   }
 }
 
-export default adicionarItem;
+export default adicionarItem
