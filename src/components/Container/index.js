@@ -19,7 +19,7 @@ export default function ListContainer({ listaCompras, handleMarcarItem, handleEx
               </View>
               <Text style={[styles.itemText, item.marcado && styles.itemTextMarked]}>{item.nome}</Text>
               <TouchableOpacity style={styles.deleteButton} onPress={() => handleExcluirItem(item.id)}>
-                <Text style={styles.deleteButtonText}>X</Text>
+                {styles.deleteButtonText && <FontAwesome name="close" color="#FFFFFF" /> }
               </TouchableOpacity>
             </TouchableOpacity>
           ))}
